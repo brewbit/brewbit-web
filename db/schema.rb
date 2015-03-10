@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307194613) do
+ActiveRecord::Schema.define(version: 20150308211718) do
 
   create_table "nifty_attachments", force: true do |t|
     t.integer  "parent_id"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 20150307194613) do
     t.string  "tld"
     t.string  "currency"
     t.boolean "eu_member", default: false
+  end
+
+  create_table "shoppe_country_subdivisions", force: true do |t|
+    t.integer  "country_id"
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "shoppe_delivery_service_prices", force: true do |t|
@@ -232,11 +240,12 @@ ActiveRecord::Schema.define(version: 20150307194613) do
 
   create_table "shoppe_tax_rates", force: true do |t|
     t.string   "name"
-    t.decimal  "rate",         precision: 8, scale: 2
+    t.decimal  "rate",                    precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "country_ids"
     t.string   "address_type"
+    t.text     "country_subdivision_ids"
   end
 
   create_table "shoppe_users", force: true do |t|
