@@ -45,5 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # A attractive and complete Rails engine providing e-commerce functionality for any Rails 4 application. http://tryshoppe.com
-gem 'shoppe', :git => 'https://github.com/brewbit/shoppe.git', :branch => 'master'
+gem 'shoppe', :git => 'https://github.com/brewbit/shoppe.git', :branch => 'country-subdivisions'
 gem 'shoppe-stripe', :git => 'https://github.com/tryshoppe/shoppe-stripe.git', :branch => 'master'
